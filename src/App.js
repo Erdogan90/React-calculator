@@ -17,7 +17,8 @@ if(
     setCalc(calc+value);
 
     if(!ops.includes(value)){
-      setResult(eval(calc + value).toString())
+      let foo=eval;
+      setResult(foo(calc + value).toString())
     }
   }
 
@@ -37,7 +38,7 @@ if(
 }
 
   const deleteLast = () =>{
-    if(calc == ''){
+    if(calc === ''){
       return;
     }
     const value = calc.slice(0, -1);
